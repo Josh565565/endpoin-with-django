@@ -7,14 +7,14 @@ import pytz
 
 
 def get_info(request):
-    slack_name = request.GET.get("Joshua Okwor")
-    track = request.GET.get("backend")
+    slack_name = request.GET.get("slack_name")
+    track = request.GET.get("track")
 
     current_day = datetime.now(pytz.utc).strftime("%A")
 
     utc_time = datetime.now(pytz.utc).strftime("%Y-%m-%dT%H:%M:%SZ")
 
-    github_file_url = "https://github.com/username/repo/blob/main/file_name.ext"
+    github_file_url = "https://github.com/Josh565565/endpoin-with-django/blob/main/endpoint_app/views.py"
     github_repo_url = "https://github.com/Josh565565/endpoin-with-django"
 
     response_data = {
